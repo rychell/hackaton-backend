@@ -10,16 +10,20 @@
       "seed:generate": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli migration:create -c seed -n ",
       "seed:run": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli migration:run -c seed",
       "seed:revert": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli migration:revert -c seed",
-      "test": "jest",
-      "start": "ts-node src/index.ts"
+      "test": "jest"
    },
    "dependencies": {
+      "@types/faker": "^5.5.6",
+      "@types/jest": "^26.0.23",
       "axios": "^0.21.1",
+      "cors": "^2.8.5",
       "express": "^4.17.1",
+      "faker": "^5.5.3",
       "mysql": "^2.14.1",
       "pg": "^8.6.0",
       "reflect-metadata": "^0.1.10",
-      "typeorm": "0.2.34"
+      "typeorm": "0.2.34",
+      "uuid": "^8.3.2"
    },
    "devDependencies": {
       "@commitlint/cli": "^12.1.4",
@@ -39,7 +43,7 @@
       "husky": "^6.0.0",
       "jest": "^27.0.4",
       "prettier": "^2.3.0",
-      "ts-jest": "^27.0.2",
+      "ts-jest": "^27.0.3",
       "ts-node": "3.3.0",
       "ts-node-dev": "^1.1.6",
       "typescript": "3.3.3333"
