@@ -1,36 +1,47 @@
 {
-  "name": "node-typescript-template",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Rychell Sousa <rychell@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/index.ts",
-    "test": "jest"
-  },
-  "dependencies": {
-    "axios": "^0.21.1",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
-    "@types/axios": "^0.14.0",
-    "@types/express": "^4.17.12",
-    "@typescript-eslint/eslint-plugin": "^4.26.0",
-    "@typescript-eslint/parser": "^4.18.0",
-    "eslint": "^7.27.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-import-resolver-typescript": "^2.4.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-import-helpers": "^1.1.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "husky": "^6.0.0",
-    "jest": "^27.0.4",
-    "prettier": "^2.3.0",
-    "ts-jest": "^27.0.2",
-    "ts-node-dev": "^1.1.6",
-    "typescript": "^4.3.2"
-  }
+   "name": "node-typescript-template",
+   "version": "1.0.0",
+   "main": "index.js",
+   "author": "Rychell Sousa <rychell@gmail.com>",
+   "license": "MIT",
+   "scripts": {
+      "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/index.ts",
+      "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli",
+      "seed:generate": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli migration:create -c seed -n ",
+      "seed:run": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli migration:run -c seed",
+      "seed:revert": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli migration:revert -c seed",
+      "test": "jest",
+      "start": "ts-node src/index.ts"
+   },
+   "dependencies": {
+      "axios": "^0.21.1",
+      "express": "^4.17.1",
+      "mysql": "^2.14.1",
+      "pg": "^8.6.0",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "0.2.34"
+   },
+   "devDependencies": {
+      "@commitlint/cli": "^12.1.4",
+      "@commitlint/config-conventional": "^12.1.4",
+      "@types/axios": "^0.14.0",
+      "@types/express": "^4.17.12",
+      "@types/node": "^8.0.29",
+      "@typescript-eslint/eslint-plugin": "^4.26.0",
+      "@typescript-eslint/parser": "^4.18.0",
+      "eslint": "^7.27.0",
+      "eslint-config-airbnb-base": "^14.2.1",
+      "eslint-config-prettier": "^8.3.0",
+      "eslint-import-resolver-typescript": "^2.4.0",
+      "eslint-plugin-import": "^2.23.4",
+      "eslint-plugin-import-helpers": "^1.1.0",
+      "eslint-plugin-prettier": "^3.4.0",
+      "husky": "^6.0.0",
+      "jest": "^27.0.4",
+      "prettier": "^2.3.0",
+      "ts-jest": "^27.0.2",
+      "ts-node": "3.3.0",
+      "ts-node-dev": "^1.1.6",
+      "typescript": "3.3.3333"
+   }
 }

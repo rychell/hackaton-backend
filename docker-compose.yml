@@ -9,7 +9,7 @@ services:
       - 5432:5432
     environment: 
       - POSTGRES_USER=doeme.root
-      - POSTGRES_PASSWORD=\5FwH-PVedWWLh*%
+      - POSTGRES_PASSWORD=5FwH-PVedWWLh*%
       - POSTGRES_DB=pg_doeme
     volumes: 
       - pgdata:/data/postgres

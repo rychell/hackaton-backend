@@ -1,0 +1,29 @@
+[{
+    "type": "postgres",
+    "port": 5432,
+    "host": "localhost",
+    "username": "doeme.root",
+    "password": "5FwH-PVedWWLh*%",
+    "database": "pg_doeme",
+    "migrations": ["./src/shared/infra/typeorm/migrations/*.ts",
+        "./src/shared/infra/typeorm/seeds/*.ts"
+    ],
+    "entities": ["./src/modules/**/entities/*.ts"],
+    "cli": {
+        "migrationsDir": "./src/shared/infra/typeorm/migrations"
+    }
+},
+{
+    "name": "seed",
+    "type": "postgres",
+    "port": 5432,
+    "host": "localhost",
+    "username": "doeme.root",
+    "password": "5FwH-PVedWWLh*%",
+    "database": "pg_doeme",
+    "migrations": ["./src/shared/infra/typeorm/seeds/*.ts"],
+    "cli": {
+        "migrationsDir": "./src/shared/infra/typeorm/seeds"
+    }
+}
+]
